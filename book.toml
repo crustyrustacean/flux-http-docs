@@ -1,0 +1,5 @@
+[book]
+authors = ["Jeff Mitchell"]
+language = "en"
+src = "src"
+title = "Flux HTTP Web Server"

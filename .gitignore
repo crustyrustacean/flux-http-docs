@@ -1,0 +1,4 @@
+# Flux HTTP Docs .gitignore
+
+# build artifacts
+book
