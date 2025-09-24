@@ -35,7 +35,8 @@ fn main() {
     // create a socket from the address and port we just made
     let socket = format!("{}:{}", address, port);
 
-    // create a listener and give it the socket we just made to listen on, panic and crash out if there's an error
+    // create a listener and give it the socket we just made to listen on
+    // panic and crash out if there's an error
     // returned by the bind method
     let listener = match TcpListener::bind(socket) {
         Ok(ltnr) => ltnr,
@@ -45,7 +46,8 @@ fn main() {
         ),
     };
 
-    // start a loop and accept incoming connections, match on an errors and print them to stderr
+    // start a loop and accept incoming connections, match on
+    // any errors and print them to stderr
     for stream in listener.incoming() {
         match stream {
             Ok(_stream) => {
