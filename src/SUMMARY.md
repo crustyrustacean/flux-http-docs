@@ -9,6 +9,7 @@
   - [TCP/IP Stack](./ch01-how-internet-works/tcp-ip-stack.md)
   - [IP Addresses and Ports](./ch01-how-internet-works/addresses-ports.md)
   - [DNS and Hostnames](./ch01-how-internet-works/dns.md)
+  - [Cheatsheet](./ch01-how-internet-works/cheat-sheet.md)
 
 - [Sockets and Connections](./ch02-sockets/index.md)
   - [What is a Socket?](./ch02-sockets/what-is-socket.md)
