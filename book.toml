@@ -2,4 +2,13 @@
 authors = ["Jeff Mitchell"]
 language = "en"
 src = "src"
-title = "Flux HTTP Web Server"
+title = "Flux Web Server"
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output]
+
+[output.html]
+additional-css = ["themes/custom.css"]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]

@@ -1,0 +1,1 @@
+# Safe and Idempotent Methods
