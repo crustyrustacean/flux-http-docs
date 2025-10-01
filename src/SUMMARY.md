@@ -16,6 +16,7 @@
   - [TCP vs UDP](./ch02-sockets/tcp-vs-udp.md)
   - [The Three-Way Handshake](./ch02-sockets/handshake.md)
   - [Socket States](./ch02-sockets/states.md)
+  - [Cheatsheet](./ch02-sockets/cheatsheet.md)
 
 - [Building a TCP Server](./ch03-tcp-server/index.md)
   - [Rust's std::net](./ch03-tcp-server/std-net.md)
