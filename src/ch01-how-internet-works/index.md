@@ -25,6 +25,6 @@ When you build a web server, you're not just writing code that responds to reque
 
 ## A Bottom-Up Approach
 
-We'll take a bottom-up approach in this chapter, starting with conceptual models and working our way toward the practical details you'll need when writing network code. Some of this might feel abstract at first, but trust the process—when we start writing actual socket code in Chapter 3, you'll be grateful for this foundation.
+We'll take a bottom-up approach in this chapter, starting with conceptual models and working our way toward the practical details you'll need when writing network code. Some of this might feel abstract at first, but trust the process—when we start writing actual socket code in Chapter 2, you'll be grateful for this foundation.
 
 Let's begin with the OSI model, the classical framework for understanding network communication.
