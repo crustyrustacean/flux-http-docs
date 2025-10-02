@@ -63,7 +63,11 @@ fn main() -> std::io::Result<()> {
 }
 ```
 
-Here's an important point: the listening socket **stays in LISTEN state**. When a client connects, the OS creates a *new* socket that handles that specific connection.
+Here's an important point: the listening socket stays in LISTEN state forever. It never handles data from clients. Instead, when the three-way handshake completes with a client, the OS creates a brand new socket specifically for that connection. The `accept()` call (or `listener.incoming()`) returns this new socket to you.
+
+Think of it like a restaurant host: the host (listening socket) stays at the front door greeting guests. When a party arrives, the host doesn't serve them—instead, the host assigns them to a table with its own waiter (a new connection socket). The host goes right back to greeting the next guests.
+
+This is why one server can handle thousands of simultaneous connections: one listening socket stays in LISTEN state, while thousands of connection sockets are in ESTABLISHED state, each handling their own client.
 
 ### SYN_RECEIVED
 When a client sends a SYN packet to your listening socket, the OS creates a new socket in `SYN_RECEIVED` state to handle the handshake. This socket is waiting for the final ACK from the client.

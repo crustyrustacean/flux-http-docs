@@ -123,14 +123,14 @@ fn main() -> std::io::Result<()> {
     println!("Server listening on port 8080");
     println!("Waiting for clients to initiate three-way handshakes...");
     
-    for stream in listener.incoming() {
-        match stream {
-            Ok(stream) => {
+    loop {
+        // accept() blocks until a complete three-way handshake finishes
+        // The OS handles the SYN, SYN-ACK, ACK exchange for us
+        match listener.accept() {
+            Ok((stream, addr)) => {
                 // By the time we get here, the three-way handshake is DONE
-                // The OS handled the SYN, SYN-ACK, ACK exchange for us
                 // The connection is in ESTABLISHED state
-                println!("New connection established with {}", 
-                    stream.peer_addr()?);
+                println!("New connection established with {}", addr);
                 
                 // We can now read and write immediately
                 // No additional handshaking needed
@@ -142,12 +142,12 @@ fn main() -> std::io::Result<()> {
             }
         }
     }
-    
-    Ok(())
 }
 ```
 
-The `accept()` call blocks until a complete three-way handshake has finished. The operating system maintains a queue of pending connections—clients that have sent SYN but haven't completed the handshake yet. Once the handshake completes, that connection moves to the "ready" queue, and `accept()` returns it to you.
+The accept() call blocks until a complete three-way handshake has finished. The operating system maintains a queue of pending connections—clients that have sent SYN but haven't completed the handshake yet. Once the handshake completes, that connection moves to the "ready" queue, and accept() returns it to you.
+
+*(Note: Rust also provides listener.incoming(), which is a convenient iterator that repeatedly calls accept() for you. Both approaches work—we're using accept() directly here to make it explicit.)*
 
 ## Timeouts and Retries
 

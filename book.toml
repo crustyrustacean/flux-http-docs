@@ -2,7 +2,7 @@
 authors = ["Jeff Mitchell"]
 language = "en"
 src = "src"
-title = "Flux Web Server"
+title = "Flux HTTP Server"
 
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
