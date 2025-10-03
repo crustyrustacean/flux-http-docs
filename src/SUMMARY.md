@@ -25,6 +25,7 @@
   - [Reading and Writing Bytes](./ch03-tcp-server/read-write.md)
   - [Error Handling](./ch03-tcp-server/errors.md)
   - [Final Code](./ch03-tcp-server/final-code.md)
+  - [Cheatsheet](./ch03-tcp-server/cheatsheet.md)
 
 # Part II: The HTTP Protocol
 
