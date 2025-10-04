@@ -42,6 +42,7 @@
   - [Headers](./ch05-http-format/headers.md)
   - [Message Body](./ch05-http-format/body.md)
   - [Line Endings and Encoding](./ch05-http-format/encoding.md)
+  - [Cheatsheet](./ch05-http-format/cheatsheet.md)
 
 - [HTTP Methods](./ch06-http-methods/index.md)
   - [GET](./ch06-http-methods/get.md)
