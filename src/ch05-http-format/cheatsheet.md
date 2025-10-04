@@ -1,4 +1,3 @@
-# Cheatsheet
 # Chapter 5 Cheatsheet
 
 ## HTTP Message Structure
