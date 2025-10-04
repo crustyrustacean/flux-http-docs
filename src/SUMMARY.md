@@ -34,6 +34,7 @@
   - [Client-Server Model](./ch04-http-basics/client-server.md)
   - [Request-Response Cycle](./ch04-http-basics/request-response.md)
   - [Stateless Protocol](./ch04-http-basics/stateless.md)
+  - [Cheatsheet](./ch04-http-basics/cheatsheet.md)
 
 - [HTTP Message Format](./ch05-http-format/index.md)
   - [Request Line](./ch05-http-format/request-line.md)
